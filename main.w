@@ -19,4 +19,7 @@ api.get("/env", inflight () => {
 
 let endpoint = new cloud.Endpoint(api.url);
 
-log("ENDPOINT URL: {endpoint.url}");
+new cloud.Function(inflight () => {
+  log("ENDPOINT URL: {endpoint.url}");
+});
+
